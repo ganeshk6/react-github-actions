@@ -28,3 +28,10 @@ jobs:
 
       - name: Make react build
         run: npm run build
+
+      - name: Download artifact build folder
+        uses: actions/upload-artifact@v4
+        with:
+          name: react-build
+          path: dist/
+          retention-days: 7
