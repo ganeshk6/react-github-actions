@@ -70,7 +70,7 @@ jobs:
           retention-days: 7
 
   deployment_job:
-    needs: [build_job]
+    needs: [first_job, eslint_job, build_job]
     runs-on: ubuntu-latest
 
     steps:
